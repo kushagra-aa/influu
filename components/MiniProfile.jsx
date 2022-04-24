@@ -10,15 +10,15 @@ const MiniProfile = () => {
       <img
         src={session?.user?.image}
         alt="user"
-        className="rounded-full border p-[2px] w-16 h-16"
+        className="rounded-full border border-purple-600 p-[2px] w-16 h-16"
       />
       <div className="flex-1 mx-4">
-        <h2 className="font-bold">{session?.user?.username}</h2>
+        <h2 className="font-bold text-purple-500">{session?.user?.username}</h2>
         <h3 className="text-sm text-gray-400 capitalize">welcome to inlfuu</h3>
       </div>
       <button
         onClick={signOut}
-        className="capitalize text-blue-400 text-sm cursor-pointer font-semibold"
+        className="capitalize text-purple-400 text-sm cursor-pointer font-semibold"
       >
         sign out
       </button>

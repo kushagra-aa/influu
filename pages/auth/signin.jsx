@@ -16,14 +16,14 @@ const signIn = ({ providers }) => {
             className="w-80"
           />
           {/* sub */}
-          <p className="text-lg text-gray-600 capitalize italic text-center">
+          <p className="text-lg text-gray-900 capitalize italic text-center">
             providing happiness
           </p>
         </div>
         {Object.values(providers).map((provider) => (
           <div key={provider.name}>
             <button
-              className="p-3 bg-blue-500 rounded-lg text-white"
+              className="p-3 bg-purple-500 rounded-lg text-gray-900"
               onClick={() => nextSignIn(provider.id, { callbackUrl: "/" })}
             >
               Sign in with {provider.name}

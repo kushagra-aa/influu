@@ -19,7 +19,7 @@ const Suggestions = () => {
         <h3 className="text-sm text-gray-400 font-medium">
           suggestions for you
         </h3>
-        <button className="text-gray-600 font-semibold capitalize">
+        <button className="text-gray-900 font-semibold capitalize">
           see all
         </button>
       </div>
@@ -42,7 +42,7 @@ const Suggestions = () => {
               {suggestion?.firstName} {suggestion?.lastName}
             </p>
           </div>
-          <button className="text-xs font-bold text-blue-400 capitalize">
+          <button className="text-xs font-bold text-purple-400 capitalize">
             folow
           </button>
         </div>

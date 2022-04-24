@@ -1,3 +1,4 @@
+import Logo from "./../public/header.png";
 import Image from "next/image";
 import {
   SearchIcon,
@@ -23,8 +24,8 @@ const Header = () => {
   }, [open]);
 
   return (
-    <nav className="shadow-sm border-b sticky z-50 top-0 bg-white">
-      <div className="flex p-2 lg:p-3 justify-between bg-white max-w-6xl mx-5 lg:mx-auto">
+    <nav className="shadow-sm border-b sticky z-50 top-0 bg-gray-900">
+      <div className="flex p-2 lg:p-3 justify-between bg-gray-900 max-w-6xl mx-5 lg:mx-auto">
         {/* left */}
         <div
           onClick={() => {
@@ -32,12 +33,7 @@ const Header = () => {
           }}
           className="relative w-24 hidden lg:inline-grid cursor-pointer"
         >
-          <Image
-            src="https://links.papareact.com/ocw"
-            alt="logo"
-            layout="fill"
-            objectFit="contain"
-          />
+          <Image src={Logo} alt="logo" layout="fill" objectFit="contain" />
         </div>
         <div
           onClick={() => {
@@ -54,13 +50,13 @@ const Header = () => {
         </div>
         {/* center */}
         <div className="max-w-xs flex items-center justify-center">
-          <div className="flex bg-gray-100 rounded-md items-center justify-center text-gray-500">
+          <div className="flex bg-gray-700 rounded-md items-center justify-center text-gray-9000">
             <form className="flex space-x-4 items-center justify-center">
               <div className="ml-2">
                 <SearchIcon className="h-5 w-5" />
               </div>
               <input
-                className="form-input bg-gray-100 block w-full sm:text-sm border-gray-300 rounded-md focus:ring-0 focus:border-0 focus:outline-none p-1"
+                className="form-input bg-gray-700 block w-full sm:text-sm border-gray-300 rounded-md focus:ring-0 focus:border-0 focus:outline-none p-1"
                 type="text"
                 placeholder="search"
               />
@@ -80,7 +76,7 @@ const Header = () => {
             <>
               <div className="nav-icons relative">
                 <PaperAirplaneIcon className="nav-icons rotate-90" />
-                <div className="absolute -top-2 -right-1 text-xs w-5 h-5 bg-red-400 opacity-95 rounded-full flex items-center justify-center animate-pulse">
+                <div className="absolute -top-2 -right-1 text-xs w-5 h-5 bg-purple-500 opacity-95 rounded-full flex items-center justify-center animate-pulse">
                   3
                 </div>
               </div>
@@ -104,7 +100,7 @@ const Header = () => {
           ) : (
             <button
               onClick={signIn}
-              className="capitalize text-gray-800 text-m whitespace-nowrap"
+              className="capitalize text-gray-800 text-m gray-900space-nowrap"
             >
               sign in
             </button>

@@ -79,7 +79,7 @@ const Post = ({ id, username, userImg, img, caption, timestamp }) => {
   }, [db, id]);
 
   return (
-    <div className="bg-white my-7 border rounded-sm">
+    <div className="bg-gray-900 my-7 border border-gray-800 rounded-sm">
       {/* header */}
       <div className="flex items-center p-5">
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -89,15 +89,15 @@ const Post = ({ id, username, userImg, img, caption, timestamp }) => {
           alt={""}
           className="rounded-full h-12 w-12 object-contain border p-1 mr-3"
         />
-        <p className="flex-1 font-semibold">{username}</p>
-        <DotsHorizontalIcon className="h-5 " />
+        <p className="flex-1 font-semibold !text-purple-400">{username}</p>
+        <DotsHorizontalIcon className="h-5 text-purple-200" />
       </div>
       {/* img */}
       {/*  eslint-disable-next-line @next/next/no-img-element */}
       <img src={img} alt={caption} className="object-cover w-full" />
       {/* buttons */}
       {session && (
-        <div className="flex justify-between p-4">
+        <div className="flex justify-between p-4 ">
           <div className="flex space-x-4">
             {hasLiked ? (
               <HeartFilledIcon
@@ -115,17 +115,17 @@ const Post = ({ id, username, userImg, img, caption, timestamp }) => {
       )}
       {/* caption */}
       <div className="flex items-center">
-        <p className="flex-1 p-5 truncate">
+        <p className="flex-1 p-5 truncate !text-gray-300">
           {/* likes */}
           {likes.length > 0 && (
-            <p className="font-semibold mb-1 text-gray-500">
+            <p className="font-semibold mb-1 !text-gray-500">
               {likes.length} like{likes.length > 1 && "s"}
             </p>
           )}
-          <span className="font-bold mr-1">{username}</span>
+          <span className="font-bold mr-1 text-purple-400">{username}</span>
           {caption}
         </p>
-        <Moment className="pr-5 text-xs text-gray-400" fromNow>
+        <Moment className="pr-5 text-xs !text-gray-400" fromNow>
           {timestamp?.toDate()}
         </Moment>
       </div>
@@ -134,11 +134,13 @@ const Post = ({ id, username, userImg, img, caption, timestamp }) => {
         <div className="ml-10 h-20 overflow-y-scroll scrollbar-thumb-black scrollbar-thin">
           {comments.map((com) => (
             <div className="flex items-center space-x-2 mb-3" key={com.id}>
-              <p className="text-sm flex-1">
-                <span className="font-bold">{com.data().username}</span>{" "}
+              <p className="text-sm flex-1 !text-gray-200">
+                <span className="font-bold !text-gray-400">
+                  {com.data().username}
+                </span>{" "}
                 {com.data().comment}
               </p>
-              <Moment className="pr-5 text-xs text-gray-400" fromNow>
+              <Moment className="pr-5 text-xs !text-gray-400" fromNow>
                 {com.data().timestamp?.toDate()}
               </Moment>
             </div>
@@ -148,19 +150,19 @@ const Post = ({ id, username, userImg, img, caption, timestamp }) => {
       {/* input box */}
       {session && (
         <form className="flex items-center p-4 space-x-1">
-          <EmojiHappyIcon className="h-7 text-gray-600" />
+          <EmojiHappyIcon className="h-7 text-purple-300" />
           <input
             onChange={(e) => setComment(e.target.value)}
             value={comment}
             type="text"
             placeholder="Add a comment..."
-            className="border-none flex-1 focus:ring-0 outline-none"
+            className="border-none flex-1 focus:ring-0 outline-none bg-transparent"
           />
           <button
             disabled={!comment?.trim()}
             onClick={sendComment}
             type="submit"
-            className="text-blue-400 cursor-pointer disabled:cursor-not-allowed disabled:text-blue-700"
+            className="text-purple-400 cursor-pointer disabled:cursor-not-allowed disabled:text-purple-700"
           >
             Post
           </button>
