@@ -1,4 +1,5 @@
 import Logo from "./../public/header.png";
+import Logo2 from "./../public/logo.png";
 import Image from "next/image";
 import {
   SearchIcon,
@@ -41,12 +42,7 @@ const Header = () => {
           }}
           className="relative w-9 mr-8 lg:hidden cursor-pointer"
         >
-          <Image
-            src="https://links.papareact.com/jjm"
-            alt="logo"
-            layout="fill"
-            objectFit="contain"
-          />
+          <Image src={Logo2} alt="logo" layout="fill" objectFit="contain" />
         </div>
         {/* center */}
         <div className="max-w-xs flex items-center justify-center">
