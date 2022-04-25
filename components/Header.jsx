@@ -9,6 +9,7 @@ import {
   PaperAirplaneIcon,
   MenuIcon,
   HomeIcon,
+  UserCircleIcon,
 } from "@heroicons/react/solid";
 import { signIn, signOut, useSession } from "next-auth/react";
 import { useRouter } from "next/router";
@@ -20,9 +21,7 @@ const Header = () => {
   const { data: session } = useSession();
   const [open, setOpen] = useRecoilState(modalState);
   const router = useRouter();
-  useEffect(() => {
-    console.log("open::>", open);
-  }, [open]);
+  useEffect(() => {}, [open]);
 
   return (
     <nav className="shadow-sm border-b sticky z-50 top-0 bg-gray-900">
@@ -64,6 +63,12 @@ const Header = () => {
           <HomeIcon
             onClick={() => {
               router.push("/");
+            }}
+            className="nav-icons"
+          />
+          <UserCircleIcon
+            onClick={() => {
+              router.push("/about");
             }}
             className="nav-icons"
           />

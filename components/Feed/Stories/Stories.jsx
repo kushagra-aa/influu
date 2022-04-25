@@ -10,7 +10,6 @@ const Stories = () => {
       ...randUser(),
       u_id: i,
     }));
-    console.log("res :>> ", res);
     setSuggestions(res);
   }, []);
 

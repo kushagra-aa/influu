@@ -1,34 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# InFluu
 
-## Getting Started
+<img src="./public/logo.png" width="15%" alt="logo"/>
 
-First, run the development server:
+InFluu is clone of Instagram, this is a Simple Social Application that is built on NextJS and uses Firebase for Database and Google Authentication.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Built with 🤍 For You!
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Hosted On vercel
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+<a target="_blank" href="https://influu-k.vercel.app/">
+  Visit Here
+</a>
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Screenshots
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Home Page
 
-## Learn More
+<img src="https://user-images.githubusercontent.com/68841296/165141059-29531781-d167-4fa1-8827-c83f774079d7.png" width="75%" />
 
-To learn more about Next.js, take a look at the following resources:
+### Home Page Mobile
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<img src="https://user-images.githubusercontent.com/68841296/165141204-0165b38e-4a25-4383-9dcb-ee17929221ac.png" width="25%"/>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Login Page
 
-## Deploy on Vercel
+<img src="https://user-images.githubusercontent.com/68841296/165141309-8795c730-f9e9-4fba-9418-f2c89c06c87a.png" width="75%" />
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Made using
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [HTML](https://www.w3schools.com/html/)
+- [CSS](https://www.w3schools.com/css/default.asp)
+- [JavaScript](https://www.w3schools.com/js/default.asp)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [ReactJs](https://reactjs.org/)
+- [NextJs](https://nextjs.org/)
+- [NodeJs](https://nodejs.org/en/)
+- [Firebase](https://firebase.google.com/)
+- [Recoil](https://recoiljs.org/)
+
+### Tools
+
+- [Adobe Illustrator](https://www.adobe.com/in/products/illustrator.html?gclid=CjwKCAjwrfCRBhAXEiwAnkmKmW22TvR_yR5HsJU6LKlqymL7bsf2_JZPurewrpYvRR9I2H412N4x0hoCsd0QAvD_BwE&sdid=SBNHMR64&mv=search&ef_id=CjwKCAjwrfCRBhAXEiwAnkmKmW22TvR_yR5HsJU6LKlqymL7bsf2_JZPurewrpYvRR9I2H412N4x0hoCsd0QAvD_BwE:G:s&s_kwcid=AL!3085!3!248235017693!e!!g!!adobe%20illustrator!221172068!17525759228)
+- [Figma](https://www.figma.com/)
+- [VS Code](https://code.visualstudio.com/)
+
+### Some Websites Used
+
+- [Favicon.io](https://favicon.io/)
+
+## Concepts Used
+
+- Next Auth
+- Firebase Store
+- Firebase Storage
+- Google Authentication
+- Recoil Atoms
+- React Props
+- React States
+- React UseEffects
+- React Components
+- Javascript Objects
+- CSS Animations
+- Responsive CSS

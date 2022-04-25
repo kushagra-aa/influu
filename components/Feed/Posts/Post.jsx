@@ -20,7 +20,7 @@ import {
   serverTimestamp,
   setDoc,
 } from "firebase/firestore";
-import { db } from "../firebase";
+import { db } from "../../../firebase";
 import Moment from "react-moment";
 
 const Post = ({ id, username, userImg, img, caption, timestamp }) => {

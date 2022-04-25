@@ -7,7 +7,7 @@ import {
   query,
 } from "firebase/firestore";
 import { useEffect, useState } from "react";
-import { db } from "../firebase";
+import { db } from "../../../firebase";
 import Post from "./Post";
 
 const Posts = () => {
@@ -23,8 +23,6 @@ const Posts = () => {
   };
 
   useEffect(() => getAllPosts(), []);
-
-  console.log("posts :>> ", posts);
 
   return (
     <div>

@@ -9,6 +9,23 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+.hover-up,
+.hover-down {
+  transition: transform 0.5s ease-in-out;
+}
+.hover-down:hover {
+  transform: translateY(25%);
+}
+.hover-up:hover {
+  transform: translateY(-25%);
+}
+
+.transition-up {
+  transition: transform 1s ease-in-out;
+}
+.transitional {
+  transition: all 0.5s ease-in-out;
+}
 
 @layer components {
   body {

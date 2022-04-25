@@ -45,7 +45,6 @@ const Modal = () => {
     });
 
     // get post id for new post
-    console.log("new doc with id", docRef.id);
 
     // upload image to firebasae storage with post id
     const imgRef = ref(storage, `posts/${docRef.id}/image`);
@@ -53,7 +52,6 @@ const Modal = () => {
       async (snapshot) => {
         // get download url from fb storage and update the origianl post with image
         const downloadUrl = await getDownloadURL(imgRef);
-        console.log("downloadUrl :>> ", downloadUrl);
         await updateDoc(docRef, {
           image: downloadUrl,
         });

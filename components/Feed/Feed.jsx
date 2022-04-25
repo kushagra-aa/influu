@@ -1,8 +1,8 @@
 import { useSession } from "next-auth/react";
 import React from "react";
 import MiniProfile from "./MiniProfile";
-import Posts from "./Posts";
-import Stories from "./Stories";
+import Posts from "./Posts/Posts";
+import Stories from "./Stories/Stories";
 import Suggestions from "./Suggestions";
 
 const Feed = () => {
@@ -25,9 +25,9 @@ const Feed = () => {
           <div className="fixed top-20">
             {/* mini profile */}
             <MiniProfile />
+            {/* suggestions */}
             <Suggestions />
           </div>
-          {/* suggestions */}
         </section>
       )}
     </div>
