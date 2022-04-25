@@ -1,3 +1,4 @@
+import Logo from "./../../public/header.png";
 import { getProviders, signIn as nextSignIn } from "next-auth/react";
 import Header from "../../components/Header";
 
@@ -10,11 +11,7 @@ const signIn = ({ providers }) => {
         <div className="">
           {/* logo */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="https://links.papareact.com/ocw"
-            alt="logo"
-            className="w-80"
-          />
+          <img src={Logo.src} alt="logo" className="w-80" />
           {/* sub */}
           <p className="text-lg text-gray-900 capitalize italic text-center">
             providing happiness

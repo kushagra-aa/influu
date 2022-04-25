@@ -11,6 +11,9 @@
 }
 
 @layer components {
+  body {
+    @apply bg-gray-900;
+  }
   p {
     @apply text-purple-500;
   }

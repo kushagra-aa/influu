@@ -97,31 +97,33 @@ const Post = ({ id, username, userImg, img, caption, timestamp }) => {
       <img src={img} alt={caption} className="object-cover w-full" />
       {/* buttons */}
       {session && (
-        <div className="flex justify-between p-4 ">
-          <div className="flex space-x-4">
-            {hasLiked ? (
-              <HeartFilledIcon
-                onClick={likePost}
-                className="post-btn text-red-600"
-              />
-            ) : (
-              <HeartIcon onClick={likePost} className="post-btn" />
-            )}
-            <ChatIcon className="post-btn" />
-            <PaperAirplaneIcon className="post-btn rotate-90" />
+        <div className="flex flex-col">
+          <div className="flex justify-between p-4 ">
+            <div className="flex space-x-4">
+              {hasLiked ? (
+                <HeartFilledIcon
+                  onClick={likePost}
+                  className="post-btn text-red-600"
+                />
+              ) : (
+                <HeartIcon onClick={likePost} className="post-btn" />
+              )}
+              <ChatIcon className="post-btn" />
+              <PaperAirplaneIcon className="post-btn rotate-90" />
+            </div>
+            <BookmarkIcon className="post-btn" />
           </div>
-          <BookmarkIcon className="post-btn" />
+          {/* likes */}
+          {likes.length > 0 && (
+            <p className="ml-4 font-semibold mb-1 !text-gray-500">
+              {likes.length} like{likes.length > 1 && "s"}
+            </p>
+          )}
         </div>
       )}
       {/* caption */}
       <div className="flex items-center">
         <p className="flex-1 p-5 truncate !text-gray-300">
-          {/* likes */}
-          {likes.length > 0 && (
-            <p className="font-semibold mb-1 !text-gray-500">
-              {likes.length} like{likes.length > 1 && "s"}
-            </p>
-          )}
           <span className="font-bold mr-1 text-purple-400">{username}</span>
           {caption}
         </p>
